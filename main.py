@@ -13,6 +13,6 @@ def print_program_info():
 if __name__ == '__main__':
     print_program_info()
     # TODO - Create a Server object
-    MemeLordSlav = Server('3.21.97.118')
+    Michael_is_a_Wizard = Server('3.21.97.118')
     # TODO - Call Ping method and print the results
-    print(michael-is-a-launch-wizard-"2020".ping())
+    print(Michael_is_a_Wizard.ping())
