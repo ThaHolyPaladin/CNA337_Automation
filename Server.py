@@ -3,10 +3,12 @@
 # CNA 337 Fall 2020
 #Worked with Dylan McCormack,  Eric Yevenko
 #Received help from Luma and Hasan
-# This link helped me with the "Bad Authentication type; allowed types['pubilickey'] Error:
+## This link helped me with the "Bad Authentication type; allowed types['pubilickey'] Error:
 # https://stackoverflow.com/questions/2224066/how-to-convert-ssh-keypairs-generated-using-puttygen-windows-into-key-pairs-us
 ## This website showing how to use paramiko:
 # https://mainlydata.kubadev.com/python/using-paramiko-to-control-an-ec2-instance/
+##https://myarch.com/public-private-key-file-formats
+#This webiste helped me with understanding the file formats
 
 import os
 class Server:
@@ -32,7 +34,7 @@ import paramiko
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())  # Missing key will be added here #
 
-ssh.connect('3.21.97.118', port=22, username='ubuntu', password='', key_filename='Michael-key.Exported')
+ssh.connect('3.21.97.118', port=22, username='ec2-user', password='', key_filename='Michael-key.Exported')
 
 stdin, stdout, stderr = ssh.exec_command('''sudo apt-get update
                                          sudo apt-get upgrade -y
